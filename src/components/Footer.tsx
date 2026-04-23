@@ -92,6 +92,17 @@ export function Footer() {
             © {new Date().getFullYear()} {SITE.short} Pvt. Ltd. All rights reserved.
           </span>
           <span>Made with ❤️ in New Delhi, India</span>
+          <span>
+            Powered by{" "}
+            <a
+              href="https://skdigitaltech.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-brand-yellow hover:underline"
+            >
+              SK DigitalTech
+            </a>
+          </span>
         </div>
       </div>
     </footer>
