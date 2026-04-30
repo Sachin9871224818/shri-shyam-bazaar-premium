@@ -73,9 +73,9 @@
 :root {
   --radius: 0.875rem;
 
-  /* Brand */
-  --brand-red: oklch(0.58 0.22 25);
-  --brand-red-dark: oklch(0.48 0.21 25);
+  /* Brand — Orange (#F97316) */
+  --brand-red: oklch(0.705 0.187 47);
+  --brand-red-dark: oklch(0.605 0.18 42);
   --brand-yellow: oklch(0.88 0.18 92);
   --brand-yellow-dark: oklch(0.80 0.18 80);
   --brand-cream: oklch(0.985 0.012 90);
@@ -87,7 +87,7 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.58 0.22 25);
+  --primary: oklch(0.705 0.187 47);
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.88 0.18 92);
   --secondary-foreground: oklch(0.18 0.02 25);
@@ -183,10 +183,10 @@
     background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--brand-yellow-dark) 100%);
   }
   .bg-hero-overlay {
-    background: linear-gradient(120deg, oklch(0.18 0.02 25 / 0.78) 0%, oklch(0.48 0.21 25 / 0.55) 60%, oklch(0.18 0.02 25 / 0.4) 100%);
+    background: linear-gradient(120deg, oklch(0.18 0.02 25 / 0.78) 0%, oklch(0.605 0.18 42 / 0.55) 60%, oklch(0.18 0.02 25 / 0.4) 100%);
   }
   .shadow-brand {
-    box-shadow: 0 20px 50px -20px oklch(0.48 0.21 25 / 0.45);
+    box-shadow: 0 20px 50px -20px oklch(0.605 0.18 42 / 0.45);
   }
   .shadow-soft {
     box-shadow: 0 12px 30px -12px oklch(0.18 0.02 25 / 0.18);
