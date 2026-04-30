@@ -3,7 +3,7 @@ import { ArrowRight, Award, Heart, MapPin, Target, TrendingUp, Users } from "luc
 import { Layout } from "@/components/Layout";
 import { SITE, waLink } from "@/lib/site";
 import founder from "@/assets/founder.jpg";
-import storefront from "@/assets/storefront.jpg";
+import aboutBanner from "@/assets/about-supermart-banner.png";
 import family from "@/assets/family-shopping.jpg";
 
 export const Route = createFileRoute("/about")({
@@ -162,12 +162,12 @@ function AboutPage() {
             </ul>
           </div>
           <img
-            src={storefront}
+            src={aboutBanner}
             alt="Shri Shyam storefront"
             width={1280}
             height={800}
             loading="lazy"
-            className="rounded-3xl object-cover shadow-brand"
+            className="rounded-3xl object-cover object-center shadow-brand"
           />
         </div>
       </section>
