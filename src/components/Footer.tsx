@@ -1,23 +1,21 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
-import logo from "@/assets/logo.png";
+import logoFooter from "@/assets/logo-footer.png";
 
 export function Footer() {
   return (
     <footer className="bg-brand-ink text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-3">
-            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white p-1">
-              <img src={logo} alt={`${SITE.short} logo`} className="h-full w-full object-contain" />
-            </div>
-            <div>
-              <div className="font-display text-base font-extrabold">{SITE.short}</div>
-              <div className="text-[11px] font-semibold uppercase tracking-wider text-brand-yellow">
-                {SITE.tagline}
-              </div>
-            </div>
+          <img
+            src={logoFooter}
+            alt={`${SITE.short} logo`}
+            className="h-14 w-auto object-contain"
+            style={{ imageRendering: "auto" }}
+          />
+          <div className="mt-3 text-[11px] font-semibold uppercase tracking-wider text-brand-yellow">
+            {SITE.tagline}
           </div>
           <p className="mt-4 text-sm text-white/70">
             Delhi's trusted supermarket & wholesale brand. Lowest prices on groceries, daily
