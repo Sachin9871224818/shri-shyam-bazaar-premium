@@ -19,7 +19,13 @@ import { SITE, waLink } from "@/lib/site";
 import hero from "@/assets/hero-supermarket.jpg";
 import family from "@/assets/family-shopping.jpg";
 import warehouse from "@/assets/wholesale-warehouse.jpg";
-import storefront from "@/assets/storefront.jpg";
+import rajokriBanner from "@/assets/rajokri-banner.jpg";
+import mahipalpurBanner from "@/assets/mahipalpur-banner.jpg";
+
+const branchBanners: Record<string, string> = {
+  "Rajokri Branch": rajokriBanner,
+  "Mahipalpur Branch": mahipalpurBanner,
+};
 import catGrocery from "@/assets/cat-grocery.jpg";
 import catFruits from "@/assets/cat-fruits.jpg";
 import catKitchen from "@/assets/cat-kitchen.jpg";
