@@ -19,7 +19,13 @@ import { SITE, waLink } from "@/lib/site";
 import hero from "@/assets/hero-supermarket.jpg";
 import family from "@/assets/family-shopping.jpg";
 import warehouse from "@/assets/wholesale-warehouse.jpg";
-import storefront from "@/assets/storefront.jpg";
+import rajokriBanner from "@/assets/rajokri-banner.jpg";
+import mahipalpurBanner from "@/assets/mahipalpur-banner.jpg";
+
+const branchBanners: Record<string, string> = {
+  "Rajokri Branch": rajokriBanner,
+  "Mahipalpur Branch": mahipalpurBanner,
+};
 import catGrocery from "@/assets/cat-grocery.jpg";
 import catFruits from "@/assets/cat-fruits.jpg";
 import catKitchen from "@/assets/cat-kitchen.jpg";
@@ -447,10 +453,10 @@ function HomePage() {
             >
               <div className="relative aspect-[16/9] overflow-hidden">
                 <img
-                  src={storefront}
+                  src={branchBanners[b.name]}
                   alt={b.name}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/80 to-transparent" />
                 <div className="absolute bottom-4 left-4 text-white">
