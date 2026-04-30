@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { SITE, waLink } from "@/lib/site";
-import logo from "@/assets/logo.png";
+import headerLogo from "@/assets/logo-header.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -25,11 +25,15 @@ export function Header() {
       </div>
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-        <Link to="/" className="flex items-center gap-3 py-2">
+        <Link to="/" className="flex items-center gap-3 py-2 pl-2 pr-3">
           <img
-            src={logo}
+            src={headerLogo}
             alt={`${SITE.short} logo`}
-            className="h-12 w-12 shrink-0 object-contain sm:h-14 sm:w-14"
+            width={40}
+            height={40}
+            decoding="async"
+            className="h-9 w-9 shrink-0 object-contain sm:h-10 sm:w-10"
+            style={{ imageRendering: "auto" }}
           />
           <div className="leading-tight">
             <div className="font-display text-base font-extrabold text-foreground sm:text-lg">
