@@ -103,7 +103,7 @@ export const Route = createFileRoute("/terms")({
       <h2>10. Contact</h2>
       <p>
         For any questions regarding these Terms, contact us at{" "}
-        <a href={`mailto:${SITE.email}`}>{SITE.email}</a> or call {SITE.phones[0]}.
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a> or call {SITE.phoneDisplay}.
       </p>
     </LegalPage>
   ),

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Visit us in Rajokri or Mahipalpur, New Delhi. Call 8860120909 or WhatsApp +91 9599172370 for retail and wholesale enquiries.",
+          "Visit us in Rajokri or Mahipalpur, New Delhi. Call +91 8860110909 or WhatsApp for retail and wholesale enquiries.",
       },
       { property: "og:title", content: "Contact Shri Shyam Bachat Bazaar" },
       {
@@ -77,16 +77,16 @@ function ContactPage() {
             {
               icon: Phone,
               title: "Call Us",
-              lines: SITE.phones,
-              href: `tel:${SITE.phones[0]}`,
-              cta: "Call now",
+              lines: [SITE.phoneDisplay],
+              href: `tel:${SITE.phoneRaw}`,
+              cta: "Call Now",
             },
             {
               icon: MessageCircle,
               title: "WhatsApp",
               lines: [SITE.whatsappDisplay],
               href: waLink(),
-              cta: "Chat now",
+              cta: "Chat on WhatsApp",
             },
             {
               icon: Mail,
