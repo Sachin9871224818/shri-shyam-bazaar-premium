@@ -195,8 +195,13 @@ function HomePage() {
       </section>
 
       {/* MARQUEE STRIP */}
-      <div className="overflow-hidden bg-brand-yellow py-4">
-        <div className="flex animate-[shine_20s_linear_infinite] gap-12 whitespace-nowrap font-display text-base font-extrabold uppercase tracking-wider text-brand-ink">
+      <div className="overflow-hidden bg-brand-yellow py-3 md:py-4">
+        {/* Mobile: static centered short text */}
+        <div className="flex md:hidden items-center justify-center whitespace-nowrap px-3 py-1 font-display text-sm font-extrabold uppercase tracking-wider text-brand-ink">
+          Wholesale &amp; Retail | 10,000+ Products
+        </div>
+        {/* Desktop/Tablet: marquee */}
+        <div className="hidden md:flex animate-[shine_20s_linear_infinite] gap-12 whitespace-nowrap font-display text-base font-extrabold uppercase tracking-wider text-brand-ink">
           {Array.from({ length: 8 }).map((_, i) => (
             <span key={i} className="flex items-center gap-12">
               ⭐ Sasta Bhi, Best Bhi
