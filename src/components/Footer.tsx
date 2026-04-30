@@ -9,8 +9,8 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand-gradient font-display text-lg font-extrabold text-white">
-              S
+            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white p-1">
+              <img src={logo} alt={`${SITE.short} logo`} className="h-full w-full object-contain" />
             </div>
             <div>
               <div className="font-display text-base font-extrabold">{SITE.short}</div>
