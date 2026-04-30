@@ -100,7 +100,7 @@ export const Route = createFileRoute("/privacy")({
       <h2>9. Contact for Privacy Concerns</h2>
       <p>
         For any privacy-related questions or requests, contact us at{" "}
-        <a href={`mailto:${SITE.email}`}>{SITE.email}</a> or call {SITE.phones[0]}.
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a> or call {SITE.phoneDisplay}.
       </p>
     </LegalPage>
   ),
