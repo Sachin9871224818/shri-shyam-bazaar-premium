@@ -4,6 +4,13 @@ import { Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { z } from "zod";
 import { Layout } from "@/components/Layout";
 import { SITE, waLink } from "@/lib/site";
+import rajokriBanner from "@/assets/rajokri-banner.jpg";
+import mahipalpurBanner from "@/assets/mahipalpur-banner.jpg";
+
+const branchBanners: Record<string, string> = {
+  "Rajokri Branch": rajokriBanner,
+  "Mahipalpur Branch": mahipalpurBanner,
+};
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
