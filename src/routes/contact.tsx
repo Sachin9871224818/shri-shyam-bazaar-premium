@@ -4,6 +4,13 @@ import { Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { z } from "zod";
 import { Layout } from "@/components/Layout";
 import { SITE, waLink } from "@/lib/site";
+import rajokriBanner from "@/assets/rajokri-banner.jpg";
+import mahipalpurBanner from "@/assets/mahipalpur-banner.jpg";
+
+const branchBanners: Record<string, string> = {
+  "Rajokri Branch": rajokriBanner,
+  "Mahipalpur Branch": mahipalpurBanner,
+};
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -206,14 +213,13 @@ function ContactPage() {
                   key={b.name}
                   className="overflow-hidden rounded-2xl border border-border bg-white shadow-soft"
                 >
-                  <div className="relative aspect-[16/9] overflow-hidden bg-brand-cream">
-                    <iframe
-                      title={b.name}
-                      src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                        SITE.short + " " + b.address,
-                      )}&output=embed`}
-                      className="h-full w-full border-0"
+                  <div className="relative h-56 w-full overflow-hidden bg-brand-cream sm:h-64">
+                    <img
+                      src={branchBanners[b.name]}
+                      alt={`${b.name} storefront`}
                       loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover object-top"
                     />
                   </div>
                   <div className="p-5">
