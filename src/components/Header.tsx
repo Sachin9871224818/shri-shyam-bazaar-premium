@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { SITE, waLink } from "@/lib/site";
+import logo from "@/assets/logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
