@@ -51,11 +51,9 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 text-brand-yellow" />
-              <span>
-                {SITE.phones[0]}
-                <br />
-                {SITE.phones[1]}
-              </span>
+              <a href={`tel:${SITE.phoneRaw}`} className="hover:text-brand-yellow">
+                {SITE.phoneDisplay}
+              </a>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 h-4 w-4 text-brand-yellow" />

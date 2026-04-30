@@ -18,8 +18,8 @@ export function Header() {
       <div className="bg-brand-gradient text-primary-foreground text-xs">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2">
           <span className="font-medium tracking-wide">🚚 Wholesale & Retail · Delhi NCR</span>
-          <a href={`tel:${SITE.phones[0]}`} className="flex items-center gap-1.5 hover:opacity-90">
-            <Phone className="h-3.5 w-3.5" /> {SITE.phones[0]} / {SITE.phones[1]}
+          <a href={`tel:${SITE.phoneRaw}`} className="flex items-center gap-1.5 hover:opacity-90">
+            <Phone className="h-3.5 w-3.5" /> Call Now: {SITE.phoneDisplay}
           </a>
         </div>
       </div>
