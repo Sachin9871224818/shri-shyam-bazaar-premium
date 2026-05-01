@@ -16,9 +16,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="bg-brand-gradient text-primary-foreground text-xs">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2">
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-4 px-4 py-2 md:justify-between">
           <span className="font-medium tracking-wide">🚚 Wholesale & Retail · Delhi NCR</span>
-          <a href={`tel:${SITE.phoneRaw}`} className="flex items-center gap-1.5 hover:opacity-90">
+          <a href={`tel:${SITE.phoneRaw}`} className="hidden items-center gap-1.5 hover:opacity-90 md:flex">
             <Phone className="h-3.5 w-3.5" /> Call Now: {SITE.phoneDisplay}
           </a>
         </div>
