@@ -75,6 +75,14 @@ export function Footer() {
             Our Stores
           </div>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
+            <li className="flex items-start gap-2">
+              <MapPin className="mt-0.5 h-4 w-4 text-brand-yellow" />
+              <span>
+                <span className="font-semibold text-white">Head Office</span>
+                <br />
+                {SITE.headOffice}
+              </span>
+            </li>
             {SITE.branches.map((b) => (
               <li key={b.name} className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 text-brand-yellow" />
@@ -92,7 +100,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-white/60 sm:flex-row">
           <span>
-            © {new Date().getFullYear()} {SITE.short} Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} {SITE.legalName} · GSTIN {SITE.gstin} · All rights reserved.
           </span>
           <span>Made with ❤️ in New Delhi, India</span>
           <span>
