@@ -9,16 +9,23 @@ import family from "@/assets/family-shopping.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Shri Shyam Bachat Bazaar | Founded by Nikku Yadav" },
+      {
+        title:
+          "About Shri Shyam Bachat Bazaar Pvt. Ltd. — GST Registered Supermarket & Wholesale, New Delhi",
+      },
       {
         name: "description",
         content:
-          "Founded by Nikku Yadav with 10+ years retail experience and a 30+ year family business legacy. Our mission: affordable, quality products for every Indian household.",
+          "Shri Shyam Bachat Bazaar Pvt. Ltd. (GSTIN 07ABPCS0982E1Z2) is a GST-registered private limited company founded by Director Nikku Yadav. Head office in Rajokri, New Delhi.",
       },
-      { property: "og:title", content: "About Shri Shyam Bachat Bazaar" },
+      {
+        property: "og:title",
+        content: "About Shri Shyam Bachat Bazaar Pvt. Ltd.",
+      },
       {
         property: "og:description",
-        content: "10+ years of retail trust, two Delhi stores, and a wholesale hub for businesses.",
+        content:
+          "GST-registered private limited company. 10+ years of retail trust, two Delhi stores, and a wholesale hub for businesses.",
       },
     ],
   }),
