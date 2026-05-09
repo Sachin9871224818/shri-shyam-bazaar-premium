@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Award, Heart, MapPin, Target, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, Award, BadgeCheck, Building2, FileCheck, Heart, MapPin, Target, TrendingUp, Users } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { SITE, waLink } from "@/lib/site";
 import founder from "@/assets/founder.jpg";
