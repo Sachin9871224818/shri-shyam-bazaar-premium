@@ -117,7 +117,7 @@ export function Footer() {
           <span>
             Powered by{" "}
             <a
-              href="https://skdigitaltech.com"
+              href="https://skdigitaltech.cloud"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-brand-yellow hover:underline"
