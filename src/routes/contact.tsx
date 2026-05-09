@@ -226,6 +226,32 @@ function ContactPage() {
             </p>
 
             <div className="mt-8 space-y-5">
+              <div className="rounded-2xl border-2 border-brand-red/20 bg-gradient-to-br from-white to-brand-cream p-5 shadow-soft">
+                <div className="flex items-center gap-2">
+                  <BadgeCheck className="h-5 w-5 text-brand-red" />
+                  <div className="font-display text-lg font-bold text-foreground">
+                    Registered Head Office
+                  </div>
+                </div>
+                <div className="mt-2 text-sm text-muted-foreground">{SITE.headOffice}</div>
+                <div className="mt-3 grid gap-1 text-xs text-muted-foreground sm:grid-cols-2">
+                  <div>
+                    <span className="font-semibold text-foreground">Legal Name:</span> {SITE.legalName}
+                  </div>
+                  <div>
+                    <span className="font-semibold text-foreground">GSTIN:</span>{" "}
+                    <span className="font-mono">{SITE.gstin}</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-foreground">Business Type:</span>{" "}
+                    {SITE.businessType}
+                  </div>
+                  <div>
+                    <span className="font-semibold text-foreground">Director:</span> {SITE.director}
+                  </div>
+                </div>
+              </div>
+
               {SITE.branches.map((b) => (
                 <div
                   key={b.name}
