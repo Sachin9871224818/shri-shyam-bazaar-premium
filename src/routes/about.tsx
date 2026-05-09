@@ -190,6 +190,66 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* COMPANY DETAILS */}
+      <section className="bg-brand-cream py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="inline-block rounded-full bg-brand-yellow px-4 py-1 text-xs font-bold uppercase tracking-wider text-brand-ink">
+              Company Details
+            </span>
+            <h2 className="mt-4 font-display text-3xl font-extrabold text-foreground md:text-5xl">
+              A registered, <span className="text-brand-red">GST-compliant</span> business
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Shop and partner with confidence — full transparency on our legal identity, taxation,
+              and registered office.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: Building2, label: "Legal Name", value: SITE.legalName },
+              { icon: FileCheck, label: "GSTIN", value: SITE.gstin, mono: true },
+              { icon: BadgeCheck, label: "Business Type", value: SITE.businessType },
+              { icon: Users, label: "Director", value: SITE.director },
+            ].map((c) => (
+              <div
+                key={c.label}
+                className="rounded-2xl border border-border bg-white p-6 shadow-soft"
+              >
+                <div className="mb-4 inline-grid h-11 w-11 place-items-center rounded-xl bg-brand-gradient text-primary-foreground">
+                  <c.icon className="h-5 w-5" />
+                </div>
+                <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                  {c.label}
+                </div>
+                <div
+                  className={`mt-1 text-base font-bold text-foreground ${c.mono ? "font-mono" : ""}`}
+                >
+                  {c.value}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-border bg-white p-6 shadow-soft">
+            <div className="flex items-start gap-3">
+              <div className="inline-grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-gradient text-primary-foreground">
+                <MapPin className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                  Registered Head Office
+                </div>
+                <div className="mt-1 text-base font-semibold text-foreground">
+                  {SITE.headOffice}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* GROWTH PLANS */}
       <section className="relative overflow-hidden bg-brand-ink py-20 text-white md:py-28">
         <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-red/40 blur-3xl" />
