@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Award, Heart, MapPin, Target, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, Award, BadgeCheck, Building2, FileCheck, Heart, MapPin, Target, TrendingUp, Users } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { SITE, waLink } from "@/lib/site";
 import founder from "@/assets/founder.jpg";
@@ -9,16 +9,23 @@ import family from "@/assets/family-shopping.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Shri Shyam Bachat Bazaar | Founded by Nikku Yadav" },
+      {
+        title:
+          "About Shri Shyam Bachat Bazaar Pvt. Ltd. — GST Registered Supermarket & Wholesale, New Delhi",
+      },
       {
         name: "description",
         content:
-          "Founded by Nikku Yadav with 10+ years retail experience and a 30+ year family business legacy. Our mission: affordable, quality products for every Indian household.",
+          "Shri Shyam Bachat Bazaar Pvt. Ltd. (GSTIN 07ABPCS0982E1Z2) is a GST-registered private limited company founded by Director Nikku Yadav. Head office in Rajokri, New Delhi.",
       },
-      { property: "og:title", content: "About Shri Shyam Bachat Bazaar" },
+      {
+        property: "og:title",
+        content: "About Shri Shyam Bachat Bazaar Pvt. Ltd.",
+      },
       {
         property: "og:description",
-        content: "10+ years of retail trust, two Delhi stores, and a wholesale hub for businesses.",
+        content:
+          "GST-registered private limited company. 10+ years of retail trust, two Delhi stores, and a wholesale hub for businesses.",
       },
     ],
   }),
@@ -39,9 +46,20 @@ function AboutPage() {
               A Delhi family business <span className="text-brand-red">built on trust.</span>
             </h1>
             <p className="mt-5 text-muted-foreground md:text-lg">
-              {SITE.short} is more than a supermarket — it's a promise to every Indian family that
-              quality and savings can go hand in hand.
+              {SITE.legalName} is more than a supermarket — it's a promise to every Indian family
+              that quality and savings can go hand in hand.
             </p>
+            <div className="mt-6 flex flex-wrap items-center gap-2 text-xs">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-red px-3 py-1 font-bold uppercase tracking-wider text-white shadow-soft">
+                <BadgeCheck className="h-3.5 w-3.5" /> GST Registered
+              </span>
+              <span className="rounded-full border border-border bg-white px-3 py-1 font-semibold text-muted-foreground">
+                GSTIN: <span className="font-mono text-foreground">{SITE.gstin}</span>
+              </span>
+              <span className="rounded-full border border-border bg-white px-3 py-1 font-semibold text-muted-foreground">
+                {SITE.businessType}
+              </span>
+            </div>
           </div>
           <img
             src={family}
@@ -169,6 +187,66 @@ function AboutPage() {
             loading="lazy"
             className="rounded-3xl object-cover object-center shadow-brand"
           />
+        </div>
+      </section>
+
+      {/* COMPANY DETAILS */}
+      <section className="bg-brand-cream py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="inline-block rounded-full bg-brand-yellow px-4 py-1 text-xs font-bold uppercase tracking-wider text-brand-ink">
+              Company Details
+            </span>
+            <h2 className="mt-4 font-display text-3xl font-extrabold text-foreground md:text-5xl">
+              A registered, <span className="text-brand-red">GST-compliant</span> business
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Shop and partner with confidence — full transparency on our legal identity, taxation,
+              and registered office.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: Building2, label: "Legal Name", value: SITE.legalName },
+              { icon: FileCheck, label: "GSTIN", value: SITE.gstin, mono: true },
+              { icon: BadgeCheck, label: "Business Type", value: SITE.businessType },
+              { icon: Users, label: "Director", value: SITE.director },
+            ].map((c) => (
+              <div
+                key={c.label}
+                className="rounded-2xl border border-border bg-white p-6 shadow-soft"
+              >
+                <div className="mb-4 inline-grid h-11 w-11 place-items-center rounded-xl bg-brand-gradient text-primary-foreground">
+                  <c.icon className="h-5 w-5" />
+                </div>
+                <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                  {c.label}
+                </div>
+                <div
+                  className={`mt-1 text-base font-bold text-foreground ${c.mono ? "font-mono" : ""}`}
+                >
+                  {c.value}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-border bg-white p-6 shadow-soft">
+            <div className="flex items-start gap-3">
+              <div className="inline-grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-gradient text-primary-foreground">
+                <MapPin className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                  Registered Head Office
+                </div>
+                <div className="mt-1 text-base font-semibold text-foreground">
+                  {SITE.headOffice}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

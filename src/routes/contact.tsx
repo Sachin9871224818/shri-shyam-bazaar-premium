@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import { BadgeCheck, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { z } from "zod";
 import { Layout } from "@/components/Layout";
 import { SITE, waLink } from "@/lib/site";
@@ -15,16 +15,23 @@ const branchBanners: Record<string, string> = {
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — Shri Shyam Bachat Bazaar | Rajokri & Mahipalpur Delhi" },
+      {
+        title:
+          "Contact Shri Shyam Bachat Bazaar Pvt. Ltd. — Rajokri & Mahipalpur, New Delhi",
+      },
       {
         name: "description",
         content:
-          "Visit us in Rajokri or Mahipalpur, New Delhi. Call +91 8860110909 or WhatsApp for retail and wholesale enquiries.",
+          "Contact Shri Shyam Bachat Bazaar Pvt. Ltd. (GSTIN 07ABPCS0982E1Z2). Head office in Rajokri, New Delhi. Call +91 8860110909 or WhatsApp for retail and wholesale enquiries.",
       },
-      { property: "og:title", content: "Contact Shri Shyam Bachat Bazaar" },
+      {
+        property: "og:title",
+        content: "Contact Shri Shyam Bachat Bazaar Pvt. Ltd.",
+      },
       {
         property: "og:description",
-        content: "Two stores in Delhi. Call, WhatsApp or message us — we're here to help.",
+        content:
+          "GST-registered private limited company with two Delhi stores. Call, WhatsApp or message us — we're here to help.",
       },
     ],
   }),
@@ -74,6 +81,17 @@ function ContactPage() {
             Have a question, bulk enquiry, or just want to say hi? Reach out — we usually reply
             within minutes on WhatsApp.
           </p>
+          <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-2 text-xs">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-red/20 bg-white px-3 py-1 font-bold uppercase tracking-wider text-brand-red shadow-soft">
+              <BadgeCheck className="h-3.5 w-3.5" /> GST Registered
+            </span>
+            <span className="rounded-full border border-border bg-white px-3 py-1 font-semibold text-muted-foreground">
+              GSTIN: <span className="font-mono text-foreground">{SITE.gstin}</span>
+            </span>
+            <span className="rounded-full border border-border bg-white px-3 py-1 font-semibold text-muted-foreground">
+              {SITE.businessType}
+            </span>
+          </div>
         </div>
       </section>
 
@@ -208,6 +226,32 @@ function ContactPage() {
             </p>
 
             <div className="mt-8 space-y-5">
+              <div className="rounded-2xl border-2 border-brand-red/20 bg-gradient-to-br from-white to-brand-cream p-5 shadow-soft">
+                <div className="flex items-center gap-2">
+                  <BadgeCheck className="h-5 w-5 text-brand-red" />
+                  <div className="font-display text-lg font-bold text-foreground">
+                    Registered Head Office
+                  </div>
+                </div>
+                <div className="mt-2 text-sm text-muted-foreground">{SITE.headOffice}</div>
+                <div className="mt-3 grid gap-1 text-xs text-muted-foreground sm:grid-cols-2">
+                  <div>
+                    <span className="font-semibold text-foreground">Legal Name:</span> {SITE.legalName}
+                  </div>
+                  <div>
+                    <span className="font-semibold text-foreground">GSTIN:</span>{" "}
+                    <span className="font-mono">{SITE.gstin}</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-foreground">Business Type:</span>{" "}
+                    {SITE.businessType}
+                  </div>
+                  <div>
+                    <span className="font-semibold text-foreground">Director:</span> {SITE.director}
+                  </div>
+                </div>
+              </div>
+
               {SITE.branches.map((b) => (
                 <div
                   key={b.name}

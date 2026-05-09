@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { BadgeCheck, Mail, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
 import logoFooter from "@/assets/logo-footer.png";
 
@@ -21,6 +21,12 @@ export function Footer() {
             Delhi's trusted supermarket & wholesale brand. Lowest prices on groceries, daily
             essentials, and bulk supplies.
           </p>
+          <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-brand-yellow/40 bg-brand-yellow/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-yellow">
+            <BadgeCheck className="h-3.5 w-3.5" /> GST Registered
+          </div>
+          <div className="mt-2 text-[11px] text-white/60">
+            GSTIN: <span className="font-mono text-white/85">{SITE.gstin}</span>
+          </div>
         </div>
 
         <div>
@@ -69,6 +75,14 @@ export function Footer() {
             Our Stores
           </div>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
+            <li className="flex items-start gap-2">
+              <MapPin className="mt-0.5 h-4 w-4 text-brand-yellow" />
+              <span>
+                <span className="font-semibold text-white">Head Office</span>
+                <br />
+                {SITE.headOffice}
+              </span>
+            </li>
             {SITE.branches.map((b) => (
               <li key={b.name} className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 text-brand-yellow" />
@@ -86,7 +100,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-white/60 sm:flex-row">
           <span>
-            © {new Date().getFullYear()} {SITE.short} Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} {SITE.legalName} · GSTIN {SITE.gstin} · All rights reserved.
           </span>
           <span>Made with ❤️ in New Delhi, India</span>
           <span>
