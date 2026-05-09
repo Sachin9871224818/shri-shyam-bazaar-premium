@@ -15,16 +15,23 @@ const branchBanners: Record<string, string> = {
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — Shri Shyam Bachat Bazaar | Rajokri & Mahipalpur Delhi" },
+      {
+        title:
+          "Contact Shri Shyam Bachat Bazaar Pvt. Ltd. — Rajokri & Mahipalpur, New Delhi",
+      },
       {
         name: "description",
         content:
-          "Visit us in Rajokri or Mahipalpur, New Delhi. Call +91 8860110909 or WhatsApp for retail and wholesale enquiries.",
+          "Contact Shri Shyam Bachat Bazaar Pvt. Ltd. (GSTIN 07ABPCS0982E1Z2). Head office in Rajokri, New Delhi. Call +91 8860110909 or WhatsApp for retail and wholesale enquiries.",
       },
-      { property: "og:title", content: "Contact Shri Shyam Bachat Bazaar" },
+      {
+        property: "og:title",
+        content: "Contact Shri Shyam Bachat Bazaar Pvt. Ltd.",
+      },
       {
         property: "og:description",
-        content: "Two stores in Delhi. Call, WhatsApp or message us — we're here to help.",
+        content:
+          "GST-registered private limited company with two Delhi stores. Call, WhatsApp or message us — we're here to help.",
       },
     ],
   }),
