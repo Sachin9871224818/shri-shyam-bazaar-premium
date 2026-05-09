@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import { BadgeCheck, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { z } from "zod";
 import { Layout } from "@/components/Layout";
 import { SITE, waLink } from "@/lib/site";
