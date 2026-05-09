@@ -21,6 +21,12 @@ export function Footer() {
             Delhi's trusted supermarket & wholesale brand. Lowest prices on groceries, daily
             essentials, and bulk supplies.
           </p>
+          <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-brand-yellow/40 bg-brand-yellow/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-yellow">
+            <BadgeCheck className="h-3.5 w-3.5" /> GST Registered
+          </div>
+          <div className="mt-2 text-[11px] text-white/60">
+            GSTIN: <span className="font-mono text-white/85">{SITE.gstin}</span>
+          </div>
         </div>
 
         <div>
