@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { BadgeCheck, Mail, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
 import logoFooter from "@/assets/logo-footer.png";
 
