@@ -46,9 +46,20 @@ function AboutPage() {
               A Delhi family business <span className="text-brand-red">built on trust.</span>
             </h1>
             <p className="mt-5 text-muted-foreground md:text-lg">
-              {SITE.short} is more than a supermarket — it's a promise to every Indian family that
-              quality and savings can go hand in hand.
+              {SITE.legalName} is more than a supermarket — it's a promise to every Indian family
+              that quality and savings can go hand in hand.
             </p>
+            <div className="mt-6 flex flex-wrap items-center gap-2 text-xs">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-red px-3 py-1 font-bold uppercase tracking-wider text-white shadow-soft">
+                <BadgeCheck className="h-3.5 w-3.5" /> GST Registered
+              </span>
+              <span className="rounded-full border border-border bg-white px-3 py-1 font-semibold text-muted-foreground">
+                GSTIN: <span className="font-mono text-foreground">{SITE.gstin}</span>
+              </span>
+              <span className="rounded-full border border-border bg-white px-3 py-1 font-semibold text-muted-foreground">
+                {SITE.businessType}
+              </span>
+            </div>
           </div>
           <img
             src={family}
