@@ -12,8 +12,8 @@ export const SITE = {
   phones: ["+91 8860110909"],
   phoneRaw: "8860110909",
   phoneDisplay: "+91 8860110909",
-  whatsappRaw: "919599172370",
-  whatsappDisplay: "+91 95991 72370",
+  whatsappRaw: "919728640896",
+  whatsappDisplay: "+91 97286 40896",
   email: "shrishyambachatbazaarpvtltd@gmail.com",
   branches: [
     { name: "Rajokri Branch", address: "Rajokri, New Delhi, India" },
