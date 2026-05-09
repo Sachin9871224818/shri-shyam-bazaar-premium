@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { BadgeCheck, Mail, MapPin, Phone } from "lucide-react";
+import { BadgeCheck, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
 import logoFooter from "@/assets/logo-footer.png";
 
@@ -59,6 +59,17 @@ export function Footer() {
               <Phone className="mt-0.5 h-4 w-4 text-brand-yellow" />
               <a href={`tel:${SITE.phoneRaw}`} className="hover:text-brand-yellow">
                 {SITE.phoneDisplay}
+              </a>
+            </li>
+            <li className="flex items-start gap-2">
+              <MessageCircle className="mt-0.5 h-4 w-4 text-brand-yellow" />
+              <a
+                href={`https://wa.me/${SITE.whatsappRaw}`}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-brand-yellow"
+              >
+                WhatsApp: {SITE.whatsappDisplay}
               </a>
             </li>
             <li className="flex items-start gap-2">
