@@ -81,6 +81,17 @@ function ContactPage() {
             Have a question, bulk enquiry, or just want to say hi? Reach out — we usually reply
             within minutes on WhatsApp.
           </p>
+          <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-2 text-xs">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-red/20 bg-white px-3 py-1 font-bold uppercase tracking-wider text-brand-red shadow-soft">
+              <BadgeCheck className="h-3.5 w-3.5" /> GST Registered
+            </span>
+            <span className="rounded-full border border-border bg-white px-3 py-1 font-semibold text-muted-foreground">
+              GSTIN: <span className="font-mono text-foreground">{SITE.gstin}</span>
+            </span>
+            <span className="rounded-full border border-border bg-white px-3 py-1 font-semibold text-muted-foreground">
+              {SITE.businessType}
+            </span>
+          </div>
         </div>
       </section>
 
